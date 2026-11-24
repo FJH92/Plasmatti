@@ -1,4 +1,4 @@
-"""Plasmatti 1.0.0 - one-file release.
+"""Plasmatti 1.0.1 - one-file release.
 
 Post-acquisition processing for PerkinElmer Optima ICP-OES exports: identifies samples,
 blanks and standards, chooses the wavelength, applies the blank and standard corrections
@@ -41,7 +41,7 @@ def embedded_file(name):
 
 
 def demo_folder(kind='liquid'):
-    return _Path(_tempfile.gettempdir()) / 'Plasmatti_1_0_0_demo' / ('Demo session (' + kind + ')')
+    return _Path(_tempfile.gettempdir()) / 'Plasmatti_1_0_1_demo' / ('Demo session (' + kind + ')')
 
 
 def extract_demo(kind='liquid'):
@@ -480,7 +480,7 @@ from statistics import mean, median, stdev
 from typing import Any, Dict, List, Optional, Sequence, Tuple
 
 APP_NAME = 'Plasmatti'
-APP_VERSION = '1.0.0'
+APP_VERSION = '1.0.1'
 
 APP_DEVELOPER_TEXT = ('Plasmatti was developed by the Laboratory of High Temperature Processes and Materials '
                       'at \u00c5bo Akademi University, Finland.')
@@ -1815,6 +1815,7 @@ def _no_sample_value(reading) -> bool:
 
 def _comparable(res) -> bool:
     return ('BLOCKED' not in res.flags and not any(f.startswith('BELOW_') for f in res.flags)
+            and res.dl is not None                      # a sample counts only when its wavelength has a limit
             and res.corrected_mean_mg_l is not None and res.corrected_mean_mg_l > 0)
 
 

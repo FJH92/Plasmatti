@@ -1,5 +1,9 @@
 # Changelog
 
+## v1.0.1
+
+* Fixed: the wavelength-fallback agreement check no longer counts samples whose wavelength has no reporting limit. Another emission line is used only when it agrees with the chosen line on at least 5 samples that are above the limit on both; a sample without a limit cannot show that. The built-in limit table gives every wavelength a limit, so results made with it do not change.
+
 ## v1.0.0
 
 * First public release of Plasmatti, the version described in the submitted article.
