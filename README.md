@@ -1,6 +1,6 @@
 # Plasmatti
 
-**Current version:** v1.0.1
+**Current version:** v1.0.0
 **Latest version file:** `src/plasmatti.py`
 
 Plasmatti is an open-source Python desktop application for automated post-acquisition processing of inductively coupled plasma optical emission spectrometry (ICP-OES) data.
@@ -184,7 +184,7 @@ Plasmatti was developed in the High-Temperature Processes and Materials Group at
 
 ## Status
 
-Version **v1.0.1** corresponds to the version described in the submitted article. It differs from v1.0.0 only by one correction (see CHANGELOG).
+Version **v1.0.0** corresponds to the version described in the submitted article.
 
 ## Authors
 
