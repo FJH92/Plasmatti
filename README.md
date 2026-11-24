@@ -9,9 +9,9 @@ Plasmatti is the second application in a series of open-source tools for laborat
 
 ## Citation
 
-The article describing Plasmatti has been submitted for publication. Until it is published, please cite:
+The article describing Plasmatti is in preparation. Until it is published, please cite:
 
-Jafarihonar, F., Bezerra, L., & Vainio, E. Plasmatti: An open-source desktop application for automated processing of ICP-OES data. Submitted manuscript, 2026. https://github.com/FJH92/Plasmatti
+Jafarihonar, F., Bezerra, L., & Vainio, E. Plasmatti: An open-source desktop application for automated processing of ICP-OES data. Manuscript in preparation, 2026. https://github.com/FJH92/Plasmatti
 
 ## Overview
 
@@ -184,7 +184,7 @@ Plasmatti was developed in the High-Temperature Processes and Materials Group at
 
 ## Status
 
-Version **v1.0.0** corresponds to the version described in the submitted article.
+Version **v1.0.0** corresponds to the version described in the article (in preparation).
 
 ## Authors
 
