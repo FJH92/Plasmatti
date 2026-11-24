@@ -1815,6 +1815,7 @@ def _no_sample_value(reading) -> bool:
 
 def _comparable(res) -> bool:
     return ('BLOCKED' not in res.flags and not any(f.startswith('BELOW_') for f in res.flags)
+            and res.dl is not None                      # a sample counts only when its wavelength has a limit
             and res.corrected_mean_mg_l is not None and res.corrected_mean_mg_l > 0)
 
 
