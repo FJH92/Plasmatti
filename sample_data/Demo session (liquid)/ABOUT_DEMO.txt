@@ -1,0 +1,32 @@
+DEMO DATA - INVENTED, NOT REAL MEASUREMENTS
+
+This demo session was made up for learning Plasmatti. No value comes from a real sample or
+laboratory. It is written in the same layout as a PerkinElmer Optima "replicates as csv" export,
+so it goes through the same import as real files.
+
+The session: standard blank, standards of 1 and 20 mg/L (Ca, Cu, Fe, K, Mg, Na, Pb, Zn), sample
+blank, ten samples, sample blank, standard blank and the two standards again. Every element is
+measured at two wavelengths, axially and radially. The instrument's sensitivity drifts by +3 %
+during the run. The measurement file names the samples "Position 1", "Position 2" and so on; the
+autosampler file gives the names.
+
+What to look for (try changing the options in step 4 "Calculation rules" and compare):
+- Mineral water (Ca 9.80) and Spring water (Ca 10.25) lie on both sides of 10 mg/L, the switch point
+  of "One standard": with that option their Ca results jump, with the calibration line they do not.
+- River water, Fe: one replicate reads 12 % high. Every rule removes it.
+- Lake water, K: normal scatter (RSD about 3.6 %). Dixon's Q keeps all replicates and marks the
+  result "high scatter"; the RSD rule removes two replicates until the RSD is below 3 %, and the
+  result drops from 1.35 to 1.32 mg/L although nothing was wrong.
+- Mg: the preferred wavelength reads the low standard 9 % high. "Smallest error in %" chooses the
+  second wavelength; "in mg/L" keeps the preferred one.
+- Zn: the preferred wavelength reads 8 % high, so the second choice is used.
+- Cu: the 1 mg/L standard after the samples reads about 15 % low ("Check the standards"); the Cu
+  results of the later samples come out too high because of it.
+- Process water, Cu: the instrument gave no value on the chosen wavelength (Cu 327.393 axial), so the
+  result is calculated on Cu 324.752 axial, which agrees with it on the other samples (orange).
+- Seawater 1:10, Na: above the highest standard (arrow, extrapolated).
+- Wastewater 1:10 and Seawater 1:10: the dilution is written in the name; step 3 fills it in for
+  these two samples. Wastewater Pb is "<0.13": the limit (LOQ 0.013 mg/L) is multiplied by the dilution.
+- Ultrapure water: every result below the limit (grey). Rainwater: Cu and Pb below the limit.
+- Solid samples: choose "Solid" in step 3 and use "Import a file" with the weighing sheet in this
+  folder (mass, final volume, moisture), to try mg/kg, dry mass and the limit of each sample.

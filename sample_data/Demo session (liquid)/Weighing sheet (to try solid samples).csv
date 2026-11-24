@@ -1,0 +1,11 @@
+Sample,Mass (g),Volume (mL),Moisture (%)
+Tap water,0.2513,50,4.2
+Mineral water,0.2487,50,3.8
+Spring water,0.2502,50,5.1
+River water,0.2531,50,7.9
+Lake water,0.2468,50,6.4
+Wastewater 1:10,0.1012,50,12.5
+Seawater 1:10,0.1004,50,2.2
+Rainwater,0.2549,50,1.1
+Ultrapure water,0.2500,50,0.0
+Process water,0.2476,50,3.3

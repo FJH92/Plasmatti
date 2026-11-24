@@ -1,0 +1,11 @@
+# Changelog
+
+## v1.0.0
+
+* First public release of Plasmatti, the version described in the submitted article.
+* Six-step desktop wizard: import, questions, samples, calculation rules, results, and export.
+* Command-line interface (`analyze`, `history`, `methods`) that runs without PySide6.
+* Reads PerkinElmer Optima replicate reports (CSV and text-based PDF) and Plasmatti's documented CSV format.
+* Built-in limit table and two synthetic demonstration sessions (liquid and solid).
+* Exports a review workbook, a report workbook, a Word report with every rule and calculation, a detailed calculations workbook, and a project file that can be reopened and recalculated.
+* `--make-exe` creates a standalone Windows executable from the single source file.

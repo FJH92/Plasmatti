@@ -1,0 +1,20 @@
+DEMO DATA - INVENTED, NOT REAL MEASUREMENTS
+
+The solid-sample demo. The measurements are the same invented ones as in the liquid demo; here they are
+treated as digests of solid samples (0.25 to 0.5 g, digested and made up to 50 ml). No value comes from a
+real sample or laboratory.
+
+The folder holds what a real solid session holds:
+- the measurement file ("replicates as csv"), in the PerkinElmer Optima layout;
+- the autosampler file, which gives the sample names (the digestion blanks are "Blank 1" and "Blank 2");
+- the dissolution file, written as the laboratory writes it: a sample column and "Weight (g)", the final
+  volume once above the table ("to 50 ml"), and "xxx" for the blank, which has no mass.
+
+What to look for:
+- Step 1: the dissolution file is found next to the measurements.
+- Step 3: the masses and the volume are filled in from the dissolution file, each with its source
+  ("dissolution file, row N"); "Fish meal 1:10" and "Seaweed 1:10" find their masses under "Fish meal" and
+  "Seaweed", and the dilution 10 is taken from the name.
+- Results: mg/kg of the sample (result = C x volume / mass x dilution) next to the mg/L of the digest; the limit
+  of each sample is LOQ x volume / mass x dilution, so Garden soil and Lake sediment (0.25 g) have twice the
+  limit of the 0.5 g samples.
